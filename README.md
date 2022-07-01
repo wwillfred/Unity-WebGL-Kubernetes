@@ -6,7 +6,7 @@ This simple Kubernetes manifest will deploy a container made from a Docker image
 
 **For how to create a Docker image of a WebGL unity build,** see https://github.com/tomowatt/unity-docker-example 
 
-# Provision AKS resources
+### Provision AKS resources
 ```bash
 $ az login
 $ az group create --name GameRG --location "australiaeast"
@@ -16,14 +16,14 @@ $ kubectl config set-context Game
 $ kubectl cluster-info
 ```
 
-# Deploy the service
+### Deploy the service
 ```bash
 $ kubectl apply -f unity-build.yaml
 $ kubectl get pods
 $ kubectl get deployments
 ```
 
-# View deployed page
+### View deployed page
 ```bash
 $ kubectl get services
 # wait until the "External IP" changes from <PENDING> to an actual IP address
