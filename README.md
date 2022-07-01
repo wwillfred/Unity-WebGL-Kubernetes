@@ -1,0 +1,34 @@
+# Deploying WebGL build of Unity game with Kubernetes
+
+This simple Kubernetes manifest will deploy a container made from a Docker image that uses NGINX to serve the WebGL build of a **very** rough mockup of the game first-game.
+
+***Note:*** The first section describes how to set up a resource group and cluster using Azure Kubernetes Services; if using Minikube this section can be skipped.
+
+Thanks to.... 
+
+## Provision AKS resources
+```bash
+$ az login
+$ az group create --name GameRG --location "australiaeast"
+$ az aks create --resource-group GameRG --name Game --node-count 1
+$ az aks get-credentials --resource-group GameRG --name Game
+$ kubectl config set-context Game
+$ kubectl cluster-info
+```
+
+## Deploy the service
+```bash
+$ kubectl apply -f unity-build.yaml
+$ kubectl get pods
+$ kubectl get deployments
+```
+
+## View deployed page
+```bash
+$ kubectl get services
+# wait until the "External IP" changes from <PENDING> to an actual IP address
+$ open http://<External IP>
+```
+Then wait for your browser to open the page.
+
+
