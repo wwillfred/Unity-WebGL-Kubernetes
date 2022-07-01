@@ -32,9 +32,9 @@ $ open http://<External IP>
 ```
 Then wait for your browser to open the page. You should now see a running WebGL build of your game!
 
-### Delete AKS resources
+### Remove AKS resources
 ```zsh
 $ az aks stop --name Game --resource-group GameRG
 $ az aks delete --name Game --resource-group GameRG
 $ az group delete --name GameRG
-'''
+```
