@@ -1,6 +1,6 @@
 # Deploying WebGL build of Unity game with Kubernetes
 
-This simple Kubernetes manifest will deploy a container made from a Docker image that uses NGINX to serve the WebGL build of a mockup of the game mechanics for my [first computer game project][https://github.com/wwillfred/First-game].
+This simple Kubernetes manifest will deploy a container made from a Docker image that uses NGINX to serve the WebGL build of a mockup of the game mechanics for my [first computer game project](https://github.com/wwillfred/First-game).
 
 **Note:** The first section describes how to set up a resource group and cluster using Azure Kubernetes Service; other hosting services like EKS, GKE, or Minikube will have different provisioning steps.
 
