@@ -30,9 +30,9 @@ kubectl get services
 
 open http://<External IP>
 ```
-Then wait for your browser to open the page. You should now see a running WebGL build of your game!
+Then wait for your browser to open the page. You should now see a running WebGL build of the game!
 
-### Remove AKS resources
+### Remove AKS resources $$$
 ```zsh
 az aks stop --name Game --resource-group GameRG
 az aks delete --name Game --resource-group GameRG
